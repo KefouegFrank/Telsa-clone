@@ -1,5 +1,5 @@
 # Telsa-clone
-An app built with react native and that covers all of the most important parts from setting up the development environment to developing a working cross-platform (iOS and Android) application that you can run on your device!
+A mobile app built with react native and that covers all of the most important parts from setting up the development environment to developing a working cross-platform (iOS and Android) application that you can run on your device!
 
 During this tutorial i learned things such as:
 
