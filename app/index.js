@@ -3,9 +3,9 @@ import { StyleSheet, Text, View } from "react-native";
 export default function Page() {
   return (
     <View style={styles.container}>
-      <View style={styles.main}>
-        <Text style={styles.title}>Hello World</Text>
-        <Text style={styles.subtitle}>This is the first page of your app.</Text>
+      <View style={styles.header}>
+        <Text style={styles.title}>My Model S</Text>
+        <Text style={styles.subtitle}>Packed</Text>
       </View>
     </View>
   );
@@ -14,21 +14,21 @@ export default function Page() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: "center",
     padding: 24,
+    backgroundColor: '#161918',
+     
   },
-  main: {
-    flex: 1,
-    justifyContent: "center",
-    maxWidth: 960,
-    marginHorizontal: "auto",
+  header: {
+   marginTop: -20,
   },
   title: {
-    fontSize: 64,
-    fontWeight: "bold",
+    fontSize: 23,
+    color:'#eee', 
+    fontWeight: 'bold',
+    marginBottom: 8,
   },
   subtitle: {
-    fontSize: 36,
-    color: "#38434D",
+    color: "grey",
+    fontWeight: '500'
   },
 });
