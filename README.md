@@ -1,14 +1,13 @@
-# Expo Router Example
+# Telsa-clone
+An app built with react native and that covers all of the most important parts from setting up the development environment to developing a working cross-platform (iOS and Android) application that you can run on your device!
 
-Use [`expo-router`](https://expo.github.io/router) to build native navigation using files in the `app/` directory.
+During this tutorial i learned things such as:
 
-## 🚀 How to use
-
-```sh
-npx create-expo-app -e with-router
-```
-
-## 📝 Notes
-
-- [Expo Router: Docs](https://expo.github.io/router)
-- [Expo Router: Repo](https://github.com/expo/router)
+- Setting up the development environment
+- Setting up the project using Expo
+- Debugging
+- JSX
+- Core components (Views, Text, Image, Buttons, Lists, etc.)
+- Creating reusable components
+- Props
+- Styling
