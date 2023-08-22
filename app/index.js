@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, Image } from "react-native";
+import { StyleSheet, Text, View, Image, FlatList } from "react-native";
 
 import {
   FontAwesome,
@@ -11,6 +11,8 @@ import {
 
 import menuOptions from "../assets/menuOptions";
 import car from "../assets/images/car.png";
+import menuOption from "../components/menuOption";
+
 
 export default function Page() {
   return (
@@ -33,22 +35,11 @@ export default function Page() {
         <Ionicons name="car-sport-sharp" size={26} color="gray" />
       </View>
 
-      {/* menu option item */}
-      <View style={styles.optionRaw}>
-        {/* icon */}
-        <MaterialCommunityIcons name="car" size={26} color="gray" />
-
-        {/* text */}
-        <Text style={styles.optionText}>Control</Text>
-        
-        {/* icon */}
-        <MaterialIcons
-          name="keyboard-arrow-right"
-          size={24}
-          color="gray"
-          style={{ marginLeft: "auto", marginRight: 5,}}
-        />
-      </View>
+      <FlatList
+        data={menuOptions}
+        showsVerticalScrollIndicator={false}
+        renderItem={menuOption}
+      />
     </View>
   );
 }
@@ -81,16 +72,17 @@ const styles = StyleSheet.create({
   controls: {
     flexDirection: "row",
     justifyContent: "space-around",
+    marginVertical: 20,
   },
   optionRaw: {
     flexDirection: "row",
-    marginVertical: 10,
-    alignItems: 'center'
+    marginVertical: 20,
+    alignItems: "center",
   },
   optionText: {
     color: "#eee",
     fontSize: 15,
-    fontWeight: 'bold',
+    fontWeight: "bold",
     marginLeft: 10,
   },
 });
