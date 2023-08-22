@@ -6,13 +6,24 @@ import {
   MaterialCommunityIcons,
   FontAwesome5,
   Ionicons,
-  MaterialIcons,
 } from "@expo/vector-icons";
 
 import menuOptions from "../assets/menuOptions";
 import car from "../assets/images/car.png";
 import menuOption from "../components/menuOption";
 
+const Controls = () => {
+  return (
+    <>
+    <Image source={car} style={styles.image} resizeMode="conatin" />
+    <View style={styles.controls}>
+      <Entypo name="lock" size={26} color="gray" />
+      <MaterialCommunityIcons name="fan" size={26} color="gray" />
+      <FontAwesome5 name="bolt" size={26} color="gray" />
+      <Ionicons name="car-sport-sharp" size={26} color="gray" />
+    </View></>
+  );
+};
 
 export default function Page() {
   return (
@@ -26,19 +37,15 @@ export default function Page() {
         <FontAwesome name="user-circle" size={30} color="gray" />
       </View>
 
-      <Image source={car} style={styles.image} resizeMode="conatin" />
+      {/* <Image source={car} style={styles.image} resizeMode="conatin" /> */}
 
-      <View style={styles.controls}>
-        <Entypo name="lock" size={26} color="gray" />
-        <MaterialCommunityIcons name="fan" size={26} color="gray" />
-        <FontAwesome5 name="bolt" size={26} color="gray" />
-        <Ionicons name="car-sport-sharp" size={26} color="gray" />
-      </View>
+      {/* <Controls /> */}
 
       <FlatList
         data={menuOptions}
         showsVerticalScrollIndicator={false}
         renderItem={menuOption}
+        ListHeaderComponent={ <Controls />}
       />
     </View>
   );
@@ -73,16 +80,5 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-around",
     marginVertical: 20,
-  },
-  optionRaw: {
-    flexDirection: "row",
-    marginVertical: 20,
-    alignItems: "center",
-  },
-  optionText: {
-    color: "#eee",
-    fontSize: 15,
-    fontWeight: "bold",
-    marginLeft: 10,
   },
 });

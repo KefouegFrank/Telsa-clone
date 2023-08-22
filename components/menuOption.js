@@ -1,23 +1,18 @@
+import { Text, View, StyleSheet, Pressable } from "react-native";
+import { Link } from "expo-router";
 
-import { Text, View, StyleSheet } from "react-native";
-
-import {
-  MaterialCommunityIcons,
-  MaterialIcons,
-} from "@expo/vector-icons";
-
-
-
+import { MaterialCommunityIcons, MaterialIcons } from "@expo/vector-icons";
 
 const menuOption = ({ item }) => {
-    return (
-      <View style={styles.optionRaw}>
+  return (
+    <Link href={item.href} asChild>
+      <Pressable style={styles.optionRaw}>
         {/* icon */}
         <MaterialCommunityIcons name={item.iconName} size={26} color="gray" />
-  
+
         {/* text */}
         <Text style={styles.optionText}>{item.name}</Text>
-  
+
         {/* icon */}
         <MaterialIcons
           name="keyboard-arrow-right"
@@ -25,23 +20,23 @@ const menuOption = ({ item }) => {
           color="gray"
           style={{ marginLeft: "auto", marginRight: 5 }}
         />
-      </View>
-    );
-  };
+      </Pressable>
+    </Link>
+  );
+};
 
-  const styles = StyleSheet.create({
-    optionRaw: {
-      flexDirection: "row",
-      marginVertical: 20,
-      alignItems: "center",
-    },
-    optionText: {
-      color: "#eee",
-      fontSize: 15,
-      fontWeight: "bold",
-      marginLeft: 10,
-    },
-  });
-  
+const styles = StyleSheet.create({
+  optionRaw: {
+    flexDirection: "row",
+    marginVertical: 20,
+    alignItems: "center",
+  },
+  optionText: {
+    color: "#eee",
+    fontSize: 15,
+    fontWeight: "bold",
+    marginLeft: 10,
+  },
+});
 
-  export default menuOption;
+export default menuOption;
