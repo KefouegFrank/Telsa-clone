@@ -6,9 +6,10 @@ import {
   MaterialCommunityIcons,
   FontAwesome5,
   Ionicons,
-  AntDesign,
+  MaterialIcons,
 } from "@expo/vector-icons";
 
+import menuOptions from "../assets/menuOptions";
 import car from "../assets/images/car.png";
 
 export default function Page() {
@@ -32,15 +33,21 @@ export default function Page() {
         <Ionicons name="car-sport-sharp" size={26} color="gray" />
       </View>
 
+      {/* menu option item */}
       <View style={styles.optionRaw}>
-        <View style={styles.boxer}>
-          <Text>
-          <MaterialCommunityIcons name="car" size={26} color="gray" />
-          </Text>
-          <Text style={styles.texto}>Controls</Text>
-        </View>
+        {/* icon */}
+        <MaterialCommunityIcons name="car" size={26} color="gray" />
 
-        <AntDesign name="right" size={30} color="grey" style={styles.box} />
+        {/* text */}
+        <Text style={styles.optionText}>Control</Text>
+        
+        {/* icon */}
+        <MaterialIcons
+          name="keyboard-arrow-right"
+          size={24}
+          color="gray"
+          style={{ marginLeft: "auto", marginRight: 5,}}
+        />
       </View>
     </View>
   );
@@ -74,22 +81,16 @@ const styles = StyleSheet.create({
   controls: {
     flexDirection: "row",
     justifyContent: "space-around",
-    marginBottom: 30,
   },
-  optionRaw:{
+  optionRaw: {
+    flexDirection: "row",
+    marginVertical: 10,
+    alignItems: 'center'
   },
-  // boxer: {
-  //   backgroundColor: "blue",
-  //   flexDirection: "row",
-  // },
-  // texto: {
-  //   marginLeft: 7,
-  //   color: "#eee",
-  //   fontSize: 15,
-  //   paddingTop: 4,
-  // },
-  // box: {
-  //   flexDirection: "row",
-  //   justifyContent: "space-between",
-  // },
+  optionText: {
+    color: "#eee",
+    fontSize: 15,
+    fontWeight: 'bold',
+    marginLeft: 10,
+  },
 });
