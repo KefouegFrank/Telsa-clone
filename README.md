@@ -10,3 +10,5 @@ During this tutorial i learned things such as:
 - Creating reusable components
 - Props
 - Styling
+
+Status: Still in Progress
