@@ -1,5 +1,5 @@
 # Telsa-clone
-A react native app to hellp me get (understand) some bases in building apps using react native
+An app build using expo router to help me understand foundermental concepts in react native.
 During this tutorial i learned things such as:
 
 - Setting up the development environment
